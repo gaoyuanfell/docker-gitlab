@@ -1,0 +1,18 @@
+version: "3.1"
+networks:
+  gitlab:
+services:
+  gitlab-moka:
+    build: gitlab
+    networks:
+      - gitlab
+    ports:
+      - "3002:80"
+    volumes:
+      - ./config:/etc/gitlab
+      - ./data:/var/opt/gitlab
+      - ./logs:/var/log/gitlab
+volumes:
+  config:
+  data:
+  logs:
