@@ -12,6 +12,7 @@ services:
       - ./config:/etc/gitlab
       - ./data:/var/opt/gitlab
       - ./logs:/var/log/gitlab
+
 volumes:
   config:
   data:
